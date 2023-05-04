@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.0.0](https://github.com/Pantrist-dev/capacitor-date-picker/compare/v1.0.0...v5.0.0) (2023-05-04)
+
+
+### ⚠ BREAKING CHANGES
+
+* **cap-5:** migrate to capacitor 5
+
+### Features
+
+* **cap-5:** migrate to capacitor 5 ([2e63e97](https://github.com/Pantrist-dev/capacitor-date-picker/commit/2e63e97765ef632e95002f895a66265186159001))
+
 ## [0.3.0](https://github.com/capacitor-community/date-picker/compare/v0.2.3...v0.3.0) (2021-02-17)
 
 
