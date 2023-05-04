@@ -2,11 +2,11 @@
 <h3 align="center">Capacitor Date Picker</h3>
 <p align="center"><strong><code>@pantrist/capacitor-date-picker</code></strong></p>
 <p align="center">
-  Capacitor community plugin for native Date Picker
+  Plugin for native Date Picker
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/maintenance/yes/2022?style=flat-square" />
+  <img src="https://img.shields.io/maintenance/yes/2023?style=flat-square" />
   <a href="https://www.npmjs.com/package/@pantrist/capacitor-date-picker"><img src="https://img.shields.io/npm/l/@pantrist/capacitor-date-picker?style=flat-square" /></a>
 <br>
   <a href="https://www.npmjs.com/package/@pantrist/capacitor-date-picker"><img src="https://img.shields.io/npm/dw/@pantrist/capacitor-date-picker?style=flat-square" /></a>
@@ -15,17 +15,6 @@
 <a href="#contributors"><img src="https://img.shields.io/badge/all%20contributors-3-orange?style=flat-square" /></a>
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 </p>
-
-## Maintainers
-
-| Maintainer     | GitHub                                                  | Social                                          |
-| -------------- | ------------------------------------------------------- | ----------------------------------------------- |
-| Stewan Silva   | [stewwan](https://github.com/stewwan)                   | [@StewanSilva](https://twitter.com/StewanSilva) |
-| Daniel Pereira | [danielprrazevedo](https://github.com/danielprrazevedo) | [@DandanPrr](https://twitter.com/DandanPrr)     |
-
-## Notice 🚀
-
-We're starting fresh under an official org. If you were using the previous npm package `capacitor-datepick`, please update your package.json to `@pantrist/capacitor-date-picker`. Check out [changelog](/CHANGELOG.md) for more info.
 
 ## Installation
 
@@ -46,38 +35,6 @@ Sync native files:
 ```bash
 npx cap sync
 ```
-
-## Upgrade guide
-
-from `2.*` to `3.*` we have some new settings.
-You can see in [definitions](/src/definitions.ts) file, we hava the sections `ios` and `android`. You must change your format configs to `ios` and `android` configs.
-
-# Very important!!
-
-To maintain the consistency of the community plugins, we changed the name of the variable the plugin is in. As we are experiencing a change across the capacitor plugins import ecosystem, we think this is a good opportunity to do that
-
-Before, to use the plugin, you needed to import like this
-
-```ts
-import '@pantrist/capacitor-date-picker';
-import { Plugins } from '@capacitor/core';
-const { DatePickerPlugin } = Plugins;
-```
-
-Now, we not have the `Plugins` variable and we not register the `DatePickerPlugin` in `Capacitor.Plugins`
-To use this plugin.
-
-Now, to use this plugin, you need to do this
-
-```ts
-import { DatePicker } from '@pantrist/capacitor-date-picker';
-```
-
-You need to replace all of your code
-
-You must also follow the guide for android.
-
-## Roadmap
 
 ### ios
 
