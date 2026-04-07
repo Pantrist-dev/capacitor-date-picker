@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [7.0.1](https://github.com/Pantrist-dev/capacitor-date-picker/compare/v7.0.0...v7.0.1) (2026-04-07)
+
+
+### Bug Fixes
+
+* **ios-crash:** adjust order to set min/max before setting the date ([f18642e](https://github.com/Pantrist-dev/capacitor-date-picker/commit/f18642ed381e68ce27ff7462649ae3cab9637c52))
+
 ## [7.0.0](https://github.com/Pantrist-dev/capacitor-date-picker/compare/v0.2.3...v7.0.0) (2025-03-20)
 
 ### ⚠ BREAKING CHANGES
