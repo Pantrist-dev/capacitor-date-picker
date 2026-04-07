@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.0.0](https://github.com/Pantrist-dev/capacitor-date-picker/compare/v7.0.1...v8.0.0) (2026-04-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* **cap-8:** migrate to capacitor 8
+
+### Features
+
+* **cap-8:** migrate to capacitor 8 ([524432e](https://github.com/Pantrist-dev/capacitor-date-picker/commit/524432e8e1c859771448c600c454de4f4ef2fc89))
+
 ### [7.0.1](https://github.com/Pantrist-dev/capacitor-date-picker/compare/v7.0.0...v7.0.1) (2026-04-07)
 
 
