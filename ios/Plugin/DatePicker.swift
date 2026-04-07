@@ -104,14 +104,14 @@ public class DatePicker {
             picker.frame.origin.x = (view.frame.width - picker.frame.width) / 2
             picker.frame.origin.y = title.frame.height
         }
-        if (options.date != nil) {
-            picker.setDate(options.date!, animated: false)
-        }
         if (options.max != nil) {
             picker.maximumDate = options.max!
         }
         if (options.min != nil) {
             picker.minimumDate = options.min!
+        }
+        if (options.date != nil) {
+            picker.setDate(options.date!, animated: false)
         }
         if (options.timezone != nil) {
             picker.timeZone = TimeZone(identifier: options.timezone!)
