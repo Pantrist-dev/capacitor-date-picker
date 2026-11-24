@@ -20,23 +20,33 @@ public class DatePickerPlugin extends Plugin {
     @PluginMethod
     public void present(final PluginCall call) throws java.text.ParseException, CloneNotSupportedException {
         DatePickerOptions options = getDatePickerConfigCall(call);
-        DatePicker datePicker = new DatePicker(options, getContext());
 
-        datePicker.open(
-            new DatePickerResolve() {
-                @Override
-                public void resolve(String date) {
-                    final JSObject response = new JSObject();
-                    response.put("value", date);
-                    call.resolve(response);
-                }
+        // Plugin methods run on the "CapacitorPlugins" thread. A dialog built there owns a
+        // view hierarchy bound to that thread, and the next configuration change (rotation,
+        // dark mode, font size) dispatched on the main thread crashes with
+        // CalledFromWrongThreadException. Build and show the dialogs on the main thread.
+        getBridge().executeOnMainThread(() -> {
+            try {
+                DatePicker datePicker = new DatePicker(options, getActivity());
+                datePicker.open(
+                    new DatePickerResolve() {
+                        @Override
+                        public void resolve(String date) {
+                            final JSObject response = new JSObject();
+                            response.put("value", date);
+                            call.resolve(response);
+                        }
 
-                @Override
-                public void reject(String message) {
-                    call.reject(message);
-                }
+                        @Override
+                        public void reject(String message) {
+                            call.reject(message);
+                        }
+                    }
+                );
+            } catch (Exception e) {
+                call.reject(e.getMessage(), e);
             }
-        );
+        });
     }
 
     private DatePickerOptions getDatePickerConfig() {
