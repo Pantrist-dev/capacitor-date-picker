@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application>
+        <!-- Same configChanges as a Capacitor app's MainActivity: the activity is kept on
+             rotation and dark mode, so the change is dispatched to the open dialog. -->
+        <activity
+            android:name="com.getcapacitor.community.datepicker.ConfigChangeTestActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|smallestScreenSize|screenLayout|uiMode|navigation|density"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light" />
+    </application>
+</manifest>
