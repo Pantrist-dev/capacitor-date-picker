@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [8.0.1](https://github.com/Pantrist-dev/capacitor-date-picker/compare/v8.0.0...v8.0.1) (2026-11-24)
+
+
+### Bug Fixes
+
+* **android:** answer the call on back button and keep the configuration for a locale ([b01c2c4](https://github.com/Pantrist-dev/capacitor-date-picker/commit/b01c2c4b218e3d4d4f91e7f446eb565f12f4de90))
+* **android:** build and show the picker dialogs on the main thread ([4606bc6](https://github.com/Pantrist-dev/capacitor-date-picker/commit/4606bc6afb679c53f8d3c4be3840588fdd1af0f8))
+
 ## [8.0.0](https://github.com/Pantrist-dev/capacitor-date-picker/compare/v7.0.1...v8.0.0) (2026-04-07)
 
 
