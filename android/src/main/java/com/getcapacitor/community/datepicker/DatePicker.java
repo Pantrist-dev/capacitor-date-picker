@@ -25,8 +25,10 @@ public class DatePicker {
         if (this.options.locale != null) {
             Locale locale = new Locale(this.options.locale);
             Locale.setDefault(locale);
-            Configuration config = new Configuration();
-            config.locale = locale;
+            // Start from the current configuration: a blank one also resets dark mode,
+            // font scale and screen size on the activity's resources.
+            Configuration config = new Configuration(context.getResources().getConfiguration());
+            config.setLocale(locale);
             context.getResources().updateConfiguration(config, context.getResources().getDisplayMetrics());
         }
     }
@@ -60,10 +62,9 @@ public class DatePicker {
             cancelButton.setText(options.cancelText);
         }
 
-        cancelButton.setOnClickListener(v -> {
-            callback.resolve(null);
-            timePicker.dismiss();
-        });
+        // Cancel button, back button and a tap outside all end here, so the call is always answered.
+        timePicker.setOnCancelListener(dialog -> callback.resolve(null));
+        cancelButton.setOnClickListener(v -> timePicker.cancel());
 
         timePicker.updateTime(calendar.get(Calendar.HOUR_OF_DAY), calendar.get(Calendar.MINUTE));
 
@@ -111,10 +112,9 @@ public class DatePicker {
             cancelButton.setText(options.cancelText);
         }
 
-        cancelButton.setOnClickListener(v -> {
-            callback.resolve(null);
-            datePicker.cancel();
-        });
+        // Cancel button, back button and a tap outside all end here, so the call is always answered.
+        datePicker.setOnCancelListener(dialog -> callback.resolve(null));
+        cancelButton.setOnClickListener(v -> datePicker.cancel());
 
         datePicker.show();
     }
